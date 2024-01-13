@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <section class="py-10 flex justify-center">
+
+        <div class="w-10/12">
+            <h1 class="text-center text-4xl">{{ book.title }}</h1>
+
+            <div class="flex justify-between mt-10">
+                <div class="flex justify-between">
+
+                    <div class="w-3/12">
+                        <img src={{ book.thumbnailUrl }} width="200">
+                    </div>
+
+                    <div class="w-9/12">
+                        <p class="text-3xl">About</p>
+                        <p class="text-gray-600 mt-5">{{ book.shortDescription }}</p>
+
+                        <div class="mt-10">
+                            <p class="text-3xl">Pages</p>
+                            <p class="text-gray-600 mt-5">Total {{ book.pageCount }}</p>
+                        </div>
+
+                        <div class="mt-10">
+                            <p class="text-3xl">Author</p>
+                            <p class="text-gray-600 mt-5">{{ book.authors }}</p>
+                        </div>
+
+                        <div class="mt-10">
+                            <p class="text-3xl">Categories</p>
+                            <p class="text-gray-600 mt-5">{{ book.categories }}</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

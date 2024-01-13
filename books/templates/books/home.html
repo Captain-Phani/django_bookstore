@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <section class="py-10">
+
+        <nav>
+            <h1 class="text-center text-4xl">Books Store</h1>
+        </nav>
+        <div class="grid grid-cols-4 gap-4 mt-10">
+
+                {% for book in books %}
+                    <a href="booklist/{{book.id}}" class="justify-self-center text-center my-4" target="_blank">
+                        <div class="flex justify-center">
+                            <img src={{book.thumbnailUrl}} width="200" >
+                        </div>
+                        <p class="text-lg text-gray-700">{{book.title}}</p>
+                    </a>
+<!--                <div class="justify-self-center">-->
+<!--                    <h2>{{ book.title }}</h2>-->
+<!--                    <img src={{book.thumbnailUrl}} width="200" />-->
+
+                {% endfor %}
+
+
+        </div>
+    </section>
+</body>
+</html>
